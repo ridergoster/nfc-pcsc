@@ -748,7 +748,7 @@ class Reader extends EventEmitter {
 
 		try {
 
-			const response = await this.transmit(packet, 40);
+			const response = await this.transmit(packet, 255);
 
 			if (response.length === 2 && response.readUInt16BE(0) === 0x6a82) {
 
